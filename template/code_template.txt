@@ -1,0 +1,14 @@
+class %{klass}
+  attr_reader :lines
+
+  def initialize
+    @lines = File.read('input.txt').chomp.split(/\n/)
+  end
+
+
+  def part_1
+  end
+
+  def part_2
+  end
+end

@@ -1,0 +1,5 @@
+require_relative '%{day}'
+
+d = %{klass}.new
+puts d.part_1
+puts d.part_2

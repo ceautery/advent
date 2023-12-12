@@ -1,0 +1,26 @@
+require 'rspec'
+require_relative '%{day}'
+
+RSpec.describe %{klass} do
+  subject(:day) { described_class.new }
+
+  context '#part_1' do
+    before do
+      allow(File).to receive(:read).and_return <<~EOF
+      EOF
+    end
+
+    it '' do
+    end
+  end
+
+  context '#part_2' do
+    before do
+      allow(File).to receive(:read).and_return <<~EOF
+      EOF
+    end
+
+    it '' do
+    end
+  end
+end
