@@ -1,5 +1,4 @@
 require 'rspec'
-require 'pry'
 require_relative 'day03'
 
 RSpec.describe Day03 do
