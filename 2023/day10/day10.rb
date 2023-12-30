@@ -1,6 +1,4 @@
 class Day10
-  require 'set'
-
   attr_reader :hash, :s, :w, :h, :main_loop
 
   # UNI = { 'F' => '┌', '-' => '─', '7' => '┐', '|' => '│', 'L' => '└', 'J' => '┘' }
