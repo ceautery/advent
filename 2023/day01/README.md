@@ -1,11 +1,4 @@
 # Day 1: Trebuchet
-<style>
-.markdown-body pre.dark {
-  background-color: black;
-  color: #ddd;
-}
-.markdown-body pre.dark b { color: white; }
-</style>
 
 Combine numbers found in strings, sum them
 
@@ -18,7 +11,7 @@ Combine numbers found in strings, sum them
 
 #### Example
 
-<pre class="dark">
+<pre>
 vvk<b>5</b>i9ga<b>2</b>f
 hlchquzq<b>51</b>
 f<b>4</b>4if7p<b>0</b>wo
@@ -34,7 +27,7 @@ them together to make:
 
 * A line might only have one digit
 
-<pre class="dark">
+<pre>
 v<b>1</b>0rni<b>4</b>seb
 kwrecwjo<b>2</b>o
 <b>4</b>9n8tsuio<b>4</b>
@@ -48,7 +41,7 @@ On the second line, 2 is both the first and last digit, so combining the first a
 
 Same as part 1, but also include numbers that are spelled out as words.
 
-<pre class="dark">
+<pre>
 <b>3</b>fisixug<b>1</b>r
 rzxmcf<b>2</b>ek<b>4</b>
 <b>0</b>g<b>five</b>ecyh
@@ -68,7 +61,7 @@ any other digits, so we convert that to "5" and build "05"... or just 5.
 
 * Number words may be substrings of each other
 
-<pre class="dark">
+<pre>
 s<b>seven</b>inewbmpas76l<b>5</b>b
 <b>4</b>qfsixh3p53nin<b>eighth</b>
 <b>5</b>xtxxp9jpyt8sfvu<b>6</b>xqs
