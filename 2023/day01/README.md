@@ -103,11 +103,7 @@ and not
 
 ...due to the way regex position markers work.
 
-My solve for this used a combo of empty string
-match, lookahead assertions, and capture groups. I'm happy with it, and it reads well to me, but in
-general I like writing code that novices can follow without much effort. In this case, unless you
-live and breathe regular expressions, it's going to be hard to decipher what my regex is doing.
-
+My solve for this used a combo of an empty string match, lookahead assertion, and capture groups.
 If you aren't a regex nerd, a perfectly valid solve for part 2 is to iterate over a list of number
 words and search for their indices in each line of the dataset with something like...
 
@@ -115,6 +111,5 @@ words and search for their indices in each line of the dataset with something li
 l_idx, r_idx = [:index, :rindex].map { |cmd| line.send(cmd, number_word) }
 ```
 
-...then find the mins and maxes and what digits they correspond to. A bit more verbose, which is
-fine, but regular expressions are a great tool and worth the investment to learn.
+...then find the mins and maxes and what digits they correspond to.
 </details>
