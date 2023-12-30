@@ -1,4 +1,5 @@
 class Day02
+  require 'pry'
   attr_reader :lines, :games
 
   def initialize
@@ -8,26 +9,26 @@ class Day02
       left, right = line.split(':')
       game_num = left.match(/\d+/).to_s
 
-      gs = right.split(';').map { |game| Game.new(game) }
-      [game_num, gs]
+      hands = right.split(';').map { |hand| Hand.new(hand) }
+      [game_num, hands]
     end
   end
 
 
   def part_1
     games
-      .select { |_, games| games.all? { |g| g.red <= 12 && g.green <= 13 && g.blue <= 14 } }
+      .select { |_, hands| hands.all? { |g| g.red <= 12 && g.green <= 13 && g.blue <= 14 } }
       .sum { |game_num, _| game_num.to_i }
   end
 
   def part_2
-    games.sum do |_, gs|
-      gs.map(&:red).max * gs.map(&:green).max * gs.map(&:blue).max
+    games.sum do |_, hands|
+      hands.map(&:red).max * hands.map(&:green).max * hands.map(&:blue).max
     end
   end
 end
 
-class Game
+class Hand
   attr_reader :red, :green, :blue
 
   def initialize(str)
