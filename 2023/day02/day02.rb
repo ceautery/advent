@@ -1,5 +1,4 @@
 class Day02
-  require 'pry'
   attr_reader :lines, :games
 
   def initialize
