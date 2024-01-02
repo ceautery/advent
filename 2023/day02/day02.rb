@@ -1,8 +1,8 @@
 class Day02
-  attr_reader :lines, :games
+  attr_reader :games
 
   def initialize
-    @lines = File.read('input.txt').chomp.split(/\n/)
+    lines = File.read('input.txt').chomp.split(/\n/)
 
     @games = lines.map do |line|
       left, right = line.split(':')
