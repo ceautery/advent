@@ -2,7 +2,7 @@
 
 year = ARGV[0] || ENV['advent_year'] || '2023'
 day  = sprintf("day%02d", ARGV[1] || ENV['advent_day']  || '1')
-part = ARGV[2]
+part = ARGV[2] || ENV['advent_part']
 
 require_relative "#{year}/#{day}/#{day}"
 
