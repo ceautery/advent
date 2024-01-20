@@ -13,11 +13,6 @@ task :make_day, [:year, :day] do |_, args|
 
   Dir.mkdir(dir)
 
-  runner = File.read('template/runner_template.txt')
-  io = File.open("#{dir}/run.rb", 'w')
-  io.write(runner % params)
-  io.close
-
   code = File.read('template/code_template.txt')
   io = File.open("#{dir}/#{day}.rb", 'w')
   io.write(code % params)

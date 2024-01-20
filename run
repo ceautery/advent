@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+year = ARGV[0] || ENV['advent_year'] || '2023'
+day  = sprintf("day%02d", ARGV[1] || ENV['advent_day']  || '1')
+part = ARGV[2]
+
+require_relative "#{year}/#{day}/#{day}"
+
+Dir.chdir("#{year}/#{day}")
+d = Object.const_get(day.capitalize).new
+
+case part
+when '1'
+  puts d.part_1
+when '2'
+  puts d.part_2
+when 'spec'
+  require 'rspec'
+  RSpec::Core::Runner.run(["#{day}_spec.rb"])
+else
+  puts d.part_1
+  puts d.part_2
+end
