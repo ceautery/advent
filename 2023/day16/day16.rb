@@ -23,10 +23,8 @@ class Day16
     return if oob(x, y)
 
     cell = grid[y][x]
-    return if cell.vectors.include?(dir)
+    cell.vectors.add?(dir) || return
 
-    cell.vectors.add dir
-    # print_grid_active
     n = next_dir(dir, cell.char)
 
     if n.is_a? Array
@@ -34,8 +32,6 @@ class Day16
     else
       next_path(x, y, n)
     end
-
-    return nil
   end
 
   def next_path(x, y, dir)
@@ -60,7 +56,7 @@ class Day16
     return (H.include?(dir) ? left(dir) : right(dir)) if char == '/'
     return (V.include?(dir) ? left(dir) : right(dir)) if char == '\\'
 
-    return [left(dir), right(dir)]
+    [left(dir), right(dir)]
   end
 
   def left(dir)
@@ -114,6 +110,6 @@ class Cell
 
   def initialize(char)
     @char = char
-    @vectors = ::Set.new
+    @vectors = Set.new
   end
 end
