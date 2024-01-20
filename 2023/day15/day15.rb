@@ -35,8 +35,8 @@ class Day15
       end
     end
 
-    boxes.each_with_index.map do |box, box_num|
-      box.each_with_index.map { |lens, slot_num| (box_num + 1) * (slot_num + 1) * lens[:power].to_i }
+    boxes.each.with_index(1).map do |box, box_num|
+      box.each.with_index(1).map { |lens, slot_num| box_num * slot_num * lens[:power].to_i }
     end
       .flatten.sum
   end
