@@ -1,6 +1,4 @@
 class Day12
-  require 'pry'
-
   attr_reader :lines, :cache
 
   def initialize

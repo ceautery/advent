@@ -1,6 +1,4 @@
 class Day11
-  require 'pry'
-
   attr_reader :galaxies, :x_expands, :y_expands
 
   def initialize

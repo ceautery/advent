@@ -1,6 +1,4 @@
 class Day13
-  require 'pry'
-
   attr_reader :grids
 
   def initialize
